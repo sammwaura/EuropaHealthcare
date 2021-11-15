@@ -13,7 +13,7 @@ function Navbar() {
         <nav className="navbar">
           <div className="navbar-container">
             <Link to="/" classname="navbar-logo">
-                E <i className="fab fa-typo3"></i>
+              <i class="fab fa-etsy"></i>   uropa Health Care 
             </Link>
             <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
