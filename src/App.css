@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 body{
   margin:0px;
   padding: 0px;
@@ -32,7 +33,7 @@ input{
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-image: url('./images/background.png'); */
+  background-image: url('./images/back.jpeg');
 }
 nav{
 display: flex;
@@ -93,7 +94,7 @@ top: 50%;
 transform: translate(-22%,-50%);
 }
 .name span{
-  color: #00b7ff;
+  color: crimson;
 }
 .name .details{
   color: #969696;
@@ -248,7 +249,7 @@ width: 600px;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(images/presentation.png);
+  background-image: url(./images/hero2.webp);
   text-align: center;
 }
 #presentaion h1{
