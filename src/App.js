@@ -3,11 +3,11 @@ import Header from './components/Header';
 import Features from './components/Features';
 import About from './components/About';
 import aboutimage from './images/hero.jpg';
-import aboutimage2 from './images/hero2.webp';
 import Products from './components/Products';
 import productimage from './images/products.jpg';
 import Bronchures from './components/Bronchures';
-import bronchureimage from './images/bronchures.jpg'
+import bronchureimage from './images/bronchures.jpg';
+import Contact from './components/Contact';
 
 import './App.css'
 
@@ -21,6 +21,7 @@ function App() {
        button='Our Products' />
        <Bronchures image={bronchureimage} title = 'Download our Bronchures'
        button='Download Now'/>
+       <Contact/>
      
 
     </div>
