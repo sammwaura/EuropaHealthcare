@@ -9,6 +9,7 @@ import Bronchures from './components/Bronchures';
 import bronchureimage from './images/bronchures.jpg';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 
 import './App.css'
@@ -25,6 +26,7 @@ function App() {
        button='Download Now'/>
        <Gallery/>
        <Contact/>
+       <Footer/>
      
 
     </div>
