@@ -7,7 +7,9 @@ import Products from './components/Products';
 import productimage from './images/products.jpg';
 import Bronchures from './components/Bronchures';
 import bronchureimage from './images/bronchures.jpg';
+import Gallery from './components/Gallery';
 import Contact from './components/Contact';
+
 
 import './App.css'
 
@@ -21,6 +23,7 @@ function App() {
        button='Our Products' />
        <Bronchures image={bronchureimage} title = 'Download our Bronchures'
        button='Download Now'/>
+       <Gallery/>
        <Contact/>
      
 
