@@ -1,69 +1,83 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 import styled from 'styled-components';
-import FooterCol from './FooterCol'
 
-const FooterStyles = styled.div`
-padding-top:18rem;
-background-colour: var(--light-blue);
-.container{
+const Container = styled.div`
+    min-height: 40vh;
+    padding: 80px 60px;
+    background: lightblue;
+    justify-content: center;
+
+`
+
+const Wrapper = styled.div`
     display: flex;
-    gap: 3rem;
-}
-.col{ 
-    flex: 2;
-}
-.col2,
-.col3{
-    flex:1
-}
-.col-title{
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-`;
-function Footer() {
-    return (
-      <div className='main-footer'>
-          <div className='container'>
-                  <div className='col'>
-                      <h4 className='col-title'>EUROPA HEALTHCARE LTD</h4>
-                      <p>Europa Health Care provides aggressive,
-                          and affordable healthcare, accessible
-                          on mobile and online for everyone
-                      </p>
-                    </div>
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+`
+const Row = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+    justify-content: center;
 
-                    <div className='col2'>
-                        <FooterCol/>
-                        <h4>Company</h4>
-                        <ul className='list-unstyled'>
-                            <li>About</li>
-                            <li>Products</li>
-                            <li>Find a doctor</li>
-                            <li>Apps</li>
-                        </ul>
-                    </div>
+    @media (max-width: 1000px) {
+        grid-template-columns: repeat()(auto-fill, minmax()(200px,1fr));
+        grid-gap: 20px;
+    }
+`
+const Column = styled.div`
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    margin: 0 auto;
+`
+const Title = styled.div`
+    color: rgb(9, 83, 133);
+    max-width: 200px;
+    text-align: center;
+`
+const Link = styled.div`
 
-                    <div className='col3'>
-                        <FooterCol/>
-                        <h4>Help</h4>
-                        <ul className='list-unstyled'>
-                            <li>FAQs</li>
-                            <li>Contact Support</li>
-                            <li>Media Center</li>
-                            <li>How it works</li>
-                        </ul>
-                    </div>
+`
 
-              </div>
-                <div className='row'>
-                    <p className='col-sm'>
-                        &copy;Europa Health Care Ltd 2021 | All Rights reserved
-                    </p>
+export default class Footer extends Component {
+    render(){
+        return (
+            <Container>
+                <Wrapper>
+                    <Row>
+                        <Column>
+                            <Title>Europa Health Care</Title>
+                                <p>Europa Health Care provides progressive,
+                                    and affordable healthcare, accessible on
+                                    mobile and online for everyone.
+                                </p>
+                        </Column>
+                        <Column>
+                            <Title>Company</Title>
+                            <Link>About</Link>
+                            <Link>Products</Link>
+                            <Link>Find a doctor</Link>
+                            <Link>Apps</Link>
+                        </Column>
+                        <Column>
+                        <Title>Help</Title>
+                            <Link>FAQs</Link>
+                            <Link>Contact Support</Link>
+                            <Link>Media Center</Link>
+                            <Link>How it Works</Link>
+                        </Column>
+                    </Row>
+                
+                </Wrapper>
+            </Container>
+        )
 
-                </div>
-          </div>
-    )
+    }
+    
 }
 
-export default Footer
